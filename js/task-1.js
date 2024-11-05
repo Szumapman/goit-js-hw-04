@@ -1,14 +1,14 @@
 "use strict";
 
 function isEnoughCapacity(products, containerSize) {
-    let totalProductsCapacity = 0;
-    for (const productCapacity of Object.values(products)) {
-        if (typeof productCapacity != "number") {
-            continue; // or f.e. throw new Error("Invalid product capacity");
+    let totalProductsSpace = 0;
+    for (const productSpace of Object.values(products)) {
+        if (typeof productSpace != "number") {
+            continue; // or f.e. throw new Error("Invalid product space argument ... (log)");
         }
-        totalProductsCapacity += productCapacity;
+        totalProductsSpace += productSpace;
     }
-    return totalProductsCapacity <= containerSize;
+    return totalProductsSpace <= containerSize;
 }
 
 console.log(
